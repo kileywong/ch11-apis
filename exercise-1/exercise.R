@@ -23,7 +23,7 @@ response <- GET(paste0(base_uri, resource))
 body <- content(response, "text")
 
 # Convert the body from JSON into a data frame
-info_repos <- fromJSON(text)
+info_repos <- fromJSON(body)
 
 # How many (public) repositories does the organization have?
 print(nrow(info_repos))
